@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_OPTIONS='--openssl-legacy-provider' node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' next -p 3003",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "start": "next start -p 3003"
   },
   "repository": {
     "type": "git",
     "url": "git+https://julio_giampiere_grados@bitbucket.org/devcodela/web.git"
+  },
+  "engines": {
+    "node": "16.20.2"
   },
   "keywords": [],
   "author": "",
@@ -36,10 +39,14 @@
     "sitemap": "^6.1.0",
     "styled-components": "^5.0.1",
     "url": "^0.11.0",
-    "utils": "../utils"
+    "utils": "https://JulioGrados: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@github.com/JulioGrados/utils.git"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1",
+    "cross-env": "^7.0.3",
     "standard": "^14.3.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.3"
   }
 }
